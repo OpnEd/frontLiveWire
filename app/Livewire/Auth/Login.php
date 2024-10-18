@@ -33,14 +33,6 @@ class Login extends Component
             // Redirigir al dashboard del frontend
             return redirect()->route('dashboard');
 
-            // Hacer la petición al dashboard usando el token
-            // $dashboardResponse = $apiService->getDashboard();
-
-            /* if (isset($dashboardResponse['error']) && $dashboardResponse['error']) {
-                $this->errorMessage = $dashboardResponse['message'];
-            } else {
-                return redirect()->route('dashboard');
-            } */
         } else {
             // Si hay un error, mostrar el mensaje en el frontend
             $this->errorMessage = $response['message'] ?? 'Error al iniciar sesión';
